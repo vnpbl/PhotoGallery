@@ -1,0 +1,109 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.95em;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  p {
+    text-align: justify;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+  }
+  
+  figure {
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  img {
+    border-radius: 35px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  
+  figcaption {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  @media (min-width: 772px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    figure img {
+      border-radius: 50%;
+    }
+  
+    .grid figure:last-child {
+      grid-column: span 2;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  
+    .grid figure:nth-child(3n) {
+      grid-column: span 1; 
+    }
+  
+    figure img {
+      border-radius: 0;
+    }
+  }
+  
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #fff;
+    }
+  
+    figure {
+      background-color: #444;
+      color: #ffeb3b;
+    }
+  
+    img {
+      border-color: black;
+    }
+  }
